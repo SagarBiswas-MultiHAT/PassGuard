@@ -18,7 +18,7 @@
 <br />
 
 <a href="https://passguard.multihat.dev/">
-  <img src="https://imgur.com/CFDQCmJ.png" alt="PassGuard Interface Preview" width="880" />
+  <img src="img/passguard.multihat.dev.png" alt="PassGuard Interface Preview" width="880" />
 </a>
 
 </div>

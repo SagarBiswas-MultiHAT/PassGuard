@@ -125,6 +125,7 @@
 html,
 body {
     min-height: 100%;
+    min-width: 1200px;
 }
 
 body {
