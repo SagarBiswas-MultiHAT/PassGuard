@@ -5,8 +5,8 @@
 **A modern, zero-dependency client-side cryptographic analyzer that estimates Shannon entropy, detects heuristic patterns, and models real-world GPU cracking speeds across practical threat scenarios.**
 
 [![Live Demo](https://img.shields.io/badge/demo-live%20preview-0ea5e9?style=for-the-badge&logo=googlechrome&logoColor=white)](https://passguard.multihat.dev/)
-[![GitHub Stars](https://img.shields.io/github/stars/SagarBiswas-MultiHAT/Password-Strength-Checker?style=for-the-badge&color=f59e0b)](https://github.com/SagarBiswas-MultiHAT/Password-Strength-Checker/stargazers)
-[![License: MIT](https://img.shields.io/badge/License-MIT-10b981?style=for-the-badge)](https://github.com/SagarBiswas-MultiHAT/Password-Strength-Checker/blob/main/LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/SagarBiswas-MultiHAT/PassGuard?style=for-the-badge&color=f59e0b)](https://github.com/SagarBiswas-MultiHAT/PassGuard/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-10b981?style=for-the-badge)](https://github.com/SagarBiswas-MultiHAT/PassGuard/blob/main/LICENSE)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-0-6366f1?style=for-the-badge)](#)
 [![Vanilla JS](https://img.shields.io/badge/built%20with-Vanilla%20ES6+-f7df1e?style=for-the-badge&logo=javascript&logoColor=black)](#)
 [![Privacy 100% Client-Side](https://img.shields.io/badge/privacy-100%25%20client--side-10b981?style=for-the-badge)](#)
@@ -123,7 +123,7 @@ The total guess space ($2^{H-1}$ average attempts) is divided by real-world crac
 PassGuard is intentionally structured with pure web standards for seamless portability and zero build steps:
 
 ```
-Password-Strength-Checker/
+PassGuard/
 ├── index.html       # Semantic HTML5 markup, head theme bootstrap, and ARIA live regions
 ├── styles.css       # Glassmorphic cybersecurity styling, design tokens, and animations
 ├── script.js        # Cryptographic algorithms, entropy math, CSPRNG, and DOM handlers
@@ -131,9 +131,9 @@ Password-Strength-Checker/
 └── README.md        # Documentation and technical guide
 ```
 
-* [index.html](file:///o:/github/Password-Strength-Checker/index.html): Clean, accessible structure with inline theme initialization to eliminate Flash of Unstyled Theme (FOUT).
-* [styles.css](file:///o:/github/Password-Strength-Checker/styles.css): CSS variables for dark and light modes, responsive scenario grids, and custom styling.
-* [script.js](file:///o:/github/Password-Strength-Checker/script.js): High-precision logarithmic duration math, Fisher-Yates array shuffling, and real-time DOM management.
+* [index.html](index.html): Clean, accessible structure with inline theme initialization to eliminate Flash of Unstyled Theme (FOUT).
+* [styles.css](styles.css): CSS variables for dark and light modes, responsive scenario grids, and custom styling.
+* [script.js](script.js): High-precision logarithmic duration math, Fisher-Yates array shuffling, and real-time DOM management.
 
 ---
 
@@ -145,8 +145,8 @@ No Node.js build process, bundlers, or package installations are required.
 Simply clone the repository and open `index.html` in any modern browser:
 
 ```bash
-git clone https://github.com/SagarBiswas-MultiHAT/Password-Strength-Checker.git
-cd Password-Strength-Checker
+git clone https://github.com/SagarBiswas-MultiHAT/PassGuard.git
+cd PassGuard
 start index.html   # Windows
 # or open index.html on macOS / xdg-open index.html on Linux
 ```
@@ -172,7 +172,7 @@ python -m http.server 8000
 You can easily embed PassGuard into your existing registration, profile settings, or authentication flows.
 
 ### 1. Extract Core Analysis Logic
-The `analyzePassword(password)` function in [script.js](file:///o:/github/Password-Strength-Checker/script.js) is self-contained. It takes a raw string and returns a complete analysis object:
+The `analyzePassword(password)` function in [script.js](script.js) is self-contained. It takes a raw string and returns a complete analysis object:
 
 ```javascript
 import { analyzePassword } from './script.js';
@@ -215,6 +215,6 @@ If you find this project useful, please consider giving it a **Star** on GitHub 
 
 ## License
 
-Distributed under the **MIT License**. See [LICENSE](file:///o:/github/Password-Strength-Checker/LICENSE) for full details.
+Distributed under the **MIT License**. See [LICENSE](LICENSE) for full details.
 
 Developed with precision by [Sagar Biswas](https://github.com/SagarBiswas-MultiHAT).
