@@ -4,7 +4,7 @@
 
 **A modern, zero-dependency client-side cryptographic analyzer that estimates Shannon entropy, detects heuristic patterns, and models real-world GPU cracking speeds across practical threat scenarios.**
 
-[![Live Demo](https://img.shields.io/badge/demo-live%20preview-0ea5e9?style=for-the-badge&logo=googlechrome&logoColor=white)](https://sagarbiswas-multihat.github.io/Password-Strength-Checker/)
+[![Live Demo](https://img.shields.io/badge/demo-live%20preview-0ea5e9?style=for-the-badge&logo=googlechrome&logoColor=white)](https://passguard.multihat.dev/)
 [![GitHub Stars](https://img.shields.io/github/stars/SagarBiswas-MultiHAT/Password-Strength-Checker?style=for-the-badge&color=f59e0b)](https://github.com/SagarBiswas-MultiHAT/Password-Strength-Checker/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-10b981?style=for-the-badge)](https://github.com/SagarBiswas-MultiHAT/Password-Strength-Checker/blob/main/LICENSE)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-0-6366f1?style=for-the-badge)](#)
@@ -13,11 +13,11 @@
 
 <br />
 
-[Explore Live Demo](https://sagarbiswas-multihat.github.io/Password-Strength-Checker/) | [Key Features](#-key-features) | [Cracking Model](#-how-password-cracking-works-4-stage-model) | [Benchmarks](#-attack-scenarios--hardware-benchmarks) | [Quick Start](#-quick-start--local-development)
+[Explore Live Demo](https://passguard.multihat.dev/) | [Key Features](#-key-features) | [Cracking Model](#-how-password-cracking-works-4-stage-model) | [Benchmarks](#-attack-scenarios--hardware-benchmarks) | [Quick Start](#-quick-start--local-development)
 
 <br />
 
-<a href="https://sagarbiswas-multihat.github.io/Password-Strength-Checker/">
+<a href="https://passguard.multihat.dev/">
   <img src="https://imgur.com/CFDQCmJ.png" alt="PassGuard Interface Preview" width="880" />
 </a>
 
