@@ -1,0 +1,31 @@
+{
+  "name": "PassGuard - Password Strength Checker",
+  "short_name": "PassGuard",
+  "description": "Real-time Shannon entropy and multi-scenario brute-force resistance analyzer.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#090d16",
+  "theme_color": "#0ea5e9",
+  "icons": [
+    {
+      "src": "favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
