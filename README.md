@@ -93,6 +93,31 @@ The total guess space ($2^{H-1}$ average attempts) is divided by real-world crac
 
 ---
 
+## Complete Architectural Breakdown of the Project
+
+```text
+[ User Input: passwordEl ] 
+           │
+           ├─► Character Pool Detection (Lowercase: 26, Uppercase: 26, Digits: 10, Symbols: 33 -> max 95)
+           ├─► Shannon Entropy Math: H = Length * log2(Pool)
+           ├─► Dictionary Match & Stem Stripping (Checks 226 curated breach stems + wrapped prefix/suffix)
+           ├─► Pattern Penalties Deduction:
+           │     • Sequential Runs (e.g. "1234", "abcd", "fedcb")
+           │     • Repeated Sequence Chunks (e.g. "abab", "1212")
+           │     • Spatial QWERTY Layout Walks (e.g. "qwerty", "asdfgh")
+           │     • Character Diversity Ratio Penalties (< 50% unique characters)
+           ├─► Adjusted Entropy Calculation (bits of search space)
+           ├─► Real-World Hardware Attack Modeling:
+           │     1. Offline Fast Hash: 100 billion guesses/sec (8x RTX 4090 GPU cluster -> MD5/SHA-256)
+           │     2. Offline Slow Hash: 10,000 guesses/sec (workstation GPU / CPU -> bcrypt/Argon2id)
+           │     3. Online Throttled: 100 attempts/hour (rate-limited endpoint with CAPTCHA defenses)
+           ├─► 10-Point Interactive Checklist (5 Composition & Length, 5 Pattern Defenses)
+           ├─► Context-Aware Security Advisory & Recommendations Engine (with 4-digit year detector)
+           └─► Real-time DOM Updates (Accessible ARIA live regions, meter animation, theme persistence)
+```
+
+---
+
 ## Attack Scenarios & Hardware Benchmarks
 
 | Threat Scenario | Guess Rate | Target Hash / Defense | Representative Hardware Rig | Real-World Context |
