@@ -28,43 +28,55 @@ const timeFastGpu = document.getElementById("timeFastGpu");
 const timeSlowHash = document.getElementById("timeSlowHash");
 const timeOnline = document.getElementById("timeOnline");
 
-// Curated set of the most frequent weak passwords and common patterns
+// Curated set of high-frequency breached passwords, dictionary stems, and default credentials
+// Derived from SecLists, RockYou top 500, and annual breach intelligence reports
 const COMMON = new Set([
-  "123456",
-  "password",
-  "123456789",
-  "12345678",
-  "12345",
-  "qwerty",
-  "abc123",
-  "password1",
-  "111111",
-  "1234",
-  "admin",
-  "welcome",
-  "login",
-  "iloveyou",
-  "monkey",
-  "dragon",
-  "master",
-  "sunshine",
-  "princess",
-  "football",
-  "computer",
-  "shadow",
-  "pass1234",
-  "letmein",
-  "trustno1",
-  "secret",
-  "hunter2",
-  "root",
-  "toor",
-  "test",
-  "testing",
-  "guest",
-  "passcode",
-  "access",
-  "changeme"
+  // Top numeric patterns
+  "123456", "123456789", "12345678", "12345", "1234567", "1234", "1234567890",
+  "000000", "111111", "222222", "333333", "444444", "555555", "666666", "777777",
+  "888888", "999999", "112233", "121212", "654321", "123123", "123321", "1111", "0000",
+
+  // Keyboard walks & layouts
+  "qwerty", "qwertyuiop", "qwertz", "azerty", "asdfgh", "asdfghjkl", "zxcvbn", "zxcvbnm",
+  "1qaz2wsx", "qazwsx", "wsxedc", "zaq12wsx",
+
+  // IT defaults, systems & administrative credentials
+  "admin", "administrator", "root", "toor", "guest", "user", "master", "manager",
+  "operator", "default", "system", "server", "login", "welcome", "welcome1", "access",
+  "passcode", "changeme", "changeit", "service", "support", "oracle", "cisco", "database",
+  "test", "testing", "temp", "temporary", "public", "private", "security", "network",
+  "gateway", "passwd", "password", "password1", "pass1234", "pass123",
+
+  // Pop culture, superhero & entertainment
+  "superman", "batman", "spiderman", "ironman", "pokemon", "pikachu", "starwars",
+  "skywalker", "vader", "matrix", "gandalf", "harrypotter", "hulk", "avengers",
+  "terminator", "wolverine", "optimus", "marvel", "disney", "metallica",
+
+  // Seasons, months & calendar
+  "summer", "winter", "spring", "autumn", "january", "february", "march", "april",
+  "may", "june", "july", "august", "september", "october", "november", "december",
+  "monday", "friday", "sunday", "holiday",
+
+  // Sports & famous global clubs
+  "football", "baseball", "basketball", "soccer", "hockey", "tennis", "golf",
+  "chelsea", "arsenal", "liverpool", "barcelona", "realmadrid", "manchester",
+  "lakers", "bulls", "cowboys", "patriots", "yankees", "redsox", "dodgers",
+
+  // Common breached first names
+  "michael", "jessica", "daniel", "thomas", "charlie", "jordan", "william", "andrew",
+  "alexander", "robert", "david", "james", "john", "joseph", "anthony", "matthew",
+  "ashley", "sarah", "emily", "amanda", "melissa", "nicole", "elizabeth", "stephanie",
+  "jennifer", "richard", "charles", "george", "edward", "brian", "kevin", "donald",
+
+  // Common English nouns, adjectives & passphrases
+  "iloveyou", "iloveu", "loveyou", "monkey", "dragon", "shadow", "killer", "sunshine",
+  "princess", "computer", "letmein", "trustno1", "trustme", "secret", "hunter2",
+  "freedom", "whatever", "nothing", "forever", "monster", "champion", "warrior",
+  "diamond", "millionaire", "bullet", "knight", "blessed", "cookie", "cheese",
+  "coffee", "chocolate", "banana", "pepper", "orange", "apple", "peanut", "butter",
+  "yellow", "black", "white", "green", "purple", "silver", "golden", "rainbow",
+  "flower", "garden", "ocean", "river", "mountain", "thunder", "blizzard", "storm",
+  "mustang", "ferrari", "porsche", "camaro", "corvette", "mercedes", "harley"
 ]);
 
 passwordEl.addEventListener("input", onInput);
@@ -661,7 +673,10 @@ function renderChecks(pw, analysis = null) {
 
   // Suggestions card
   if (!isEmpty && analysis.suggestions && analysis.suggestions.length > 0) {
-    const isSuccess = passedCount === totalCount;
+    const hasWarnings = analysis.suggestions.some(
+      s => !s.startsWith("Excellent password")
+    );
+    const isSuccess = passedCount === totalCount && !hasWarnings;
     const card = document.createElement("div");
     card.className = `suggestions-card ${isSuccess ? "success" : ""}`;
 
@@ -669,7 +684,9 @@ function renderChecks(pw, analysis = null) {
     head.className = "suggestions-header";
     head.innerHTML = isSuccess
       ? `<span>🛡️</span> Security Analysis:`
-      : `<span>💡</span> Actionable Recommendations:`;
+      : (passedCount === totalCount
+          ? `<span>🛡️</span> Security Analysis & Advisory:`
+          : `<span>💡</span> Actionable Recommendations:`);
     card.appendChild(head);
 
     const ul = document.createElement("ul");
