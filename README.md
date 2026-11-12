@@ -7,9 +7,10 @@
 [![Live Demo](https://img.shields.io/badge/demo-live%20preview-0ea5e9?style=for-the-badge&logo=googlechrome&logoColor=white)](https://passguard.multihat.dev/)
 [![GitHub Stars](https://img.shields.io/github/stars/SagarBiswas-MultiHAT/PassGuard?style=for-the-badge&color=f59e0b)](https://github.com/SagarBiswas-MultiHAT/PassGuard/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-10b981?style=for-the-badge)](https://github.com/SagarBiswas-MultiHAT/PassGuard/blob/main/LICENSE)
-[![Zero Dependencies](https://img.shields.io/badge/dependencies-0-6366f1?style=for-the-badge)](#)
+[![Zero Dependencies](https://img.shields.io/badge/dependencies-0-6366f1?style=for-the-badge)](#)<br>
 [![Vanilla JS](https://img.shields.io/badge/built%20with-Vanilla%20ES6+-f7df1e?style=for-the-badge&logo=javascript&logoColor=black)](#)
-[![Privacy 100% Client-Side](https://img.shields.io/badge/privacy-100%25%20client--side-10b981?style=for-the-badge)](#)
+[![Privacy 100% Client-Side](https://img.shields.io/badge/privacy-100%25%20client--side-10b981?style=for-the-badge)](#)<br>
+[![Sponsor SagarBiswas-MultiHAT on Polar.sh](https://img.shields.io/badge/Sponsor-Polar.sh-0062FF?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://buy.polar.sh/polar_cl_I7DT5UQNUs1Qjb4VrFYOiRA2nkb3RVVUJCnjr3o5SGK)
 
 <br />
 
@@ -221,6 +222,16 @@ Include `index.html` as an iframe or integrate the component markup directly int
 * **Zero Remote Network Calls:** PassGuard does not transmit credentials, hashes, or keystrokes to any third-party server or API.
 * **Defensive Constraints:** Input values are bounded (`maxlength="128"`) to protect browser threads against denial-of-service memory exhaustion attacks.
 * **Advisory Purpose:** Entropy calculations are mathematical estimates intended for user education and client-side feedback. Production backends should always enforce server-side validation and store credentials using salted, memory-hard hashes (Argon2id or bcrypt).
+
+---
+
+## Support MultiHAT Open-Source
+
+If you find this project useful in your workflow, development, or security research, consider supporting **SagarBiswas-MultiHAT** in its ongoing maintenance and future updates (supports both One-Time and Monthly backing):
+
+[![Support on Polar.sh](https://img.shields.io/badge/Support%20on-Polar.sh-0062FF?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://buy.polar.sh/polar_cl_I7DT5UQNUs1Qjb4VrFYOiRA2nkb3RVVUJCnjr3o5SGK)
+[![Portfolio](https://img.shields.io/badge/Portfolio-sagarbiswas.multihat.dev-2563EB?style=for-the-badge&logo=todoist&logoColor=white)](https://sagarbiswas.multihat.dev/)
+[![Agency](https://img.shields.io/badge/Agency-multihat.dev-111827?style=for-the-badge&logo=vercel&logoColor=white)](https://multihat.dev)
 
 ---
 
